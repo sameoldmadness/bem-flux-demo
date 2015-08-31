@@ -10,7 +10,8 @@ var store = FLUX.STORE.create({
         name: '',
         email: '',
         password: '',
-        errors: {}
+        errors: {},
+        submitted: false
     },
 
     handlers: [
@@ -19,6 +20,22 @@ var store = FLUX.STORE.create({
             this._validate(data.type, data.value);
 
             this.emitChange();
+        }],
+
+        [actions.validateForm, function (data) {
+            Object.keys(data).forEach(function (name) {
+               this._set(name, data[name]);
+               this._validate(name, data[name]);
+               this.emitChange();
+            }, this);
+
+            var errors = this.get('errors');
+            var hasErrors = Object.keys(errors).length > 0;
+
+            if (!hasErrors) {
+                this._set('submitted', true);
+                this.emitChange();
+            }
         }]
     ]
 });
