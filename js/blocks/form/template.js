@@ -45,33 +45,37 @@ bh.match('form', function (ctx) {
             ]
         },
         {
-            block: 'control-row',
+            block: 'control-group',
             content: [
                 {
-                    block: 'input',
-                    mods: {
-                        type: 'password',
-                        width: 'available',
-                        theme: 'islands',
-                        size: 'm'
-                    },
-                    placeholder: 'Пароль',
+                    block: 'control-row',
+                    content: [
+                        {
+                            block: 'input',
+                            mods: {
+                                type: 'password',
+                                width: 'available',
+                                theme: 'islands',
+                                size: 'm'
+                            },
+                            placeholder: 'Пароль',
+                        },
+                        {
+                            block: 'validation',
+                            mods: { for: 'password' }
+                        }
+                    ]
                 },
                 {
-                    block: 'validation',
-                    mods: { for: 'password' }
+                    block: 'button',
+                    mods: {
+                        theme: 'islands',
+                        view: 'action',
+                        size: 'm'
+                    },
+                    text: 'Зарегистрироваться'
                 }
             ]
-        },
-        {
-            block: 'button',
-            mods: {
-                theme: 'islands',
-                view: 'action',
-                size: 'xl',
-                width: 'available'
-            },
-            text: 'Зарегистрироваться'
         }
     ]);
 });
