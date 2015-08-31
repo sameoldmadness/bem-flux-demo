@@ -7,7 +7,8 @@ var actions = FLUX.ACTIONS.create({
     dispatcher: dispatcher,
 
     actions: {
-        validateField: ['type', 'value']
+        validateField: ['type', 'value'],
+        validateForm: ['name', 'email', 'password']
     }
 });;
 

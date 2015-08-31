@@ -18,6 +18,16 @@ FLUX.CONTROLLER.decl('form', {
             var value = this._getInput(type).getVal();
 
             actions.validateField(type, value);
+        },
+
+        button: {
+            click: function () {
+                actions.validateForm(
+                    this._getInput('name').getVal(),
+                    this._getInput('email').getVal(),
+                    this._getInput('password').getVal()
+                );
+            }
         }
     },
 
