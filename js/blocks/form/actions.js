@@ -1,15 +1,15 @@
 modules.define(
-    'form-actions',
-    ['i-flux', 'app-dispatcher'],
-    function (provide, FLUX, dispatcher) {
+  'form-actions',
+  ['i-flux', 'app-dispatcher'],
+  function (provide, FLUX, dispatcher) {
 
 var actions = FLUX.ACTIONS.create({
-    dispatcher: dispatcher,
+  dispatcher: dispatcher,
 
-    actions: {
-        validateField: ['type', 'value']
-    }
-});;
+  actions: {
+    validateField: ['type', 'value']
+  }
+});
 
 provide(actions);
 

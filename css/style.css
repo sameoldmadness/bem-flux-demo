@@ -1,41 +1,41 @@
 .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .form {
-    padding: 10px;
-    box-sizing: border-box;
-    width: 500px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 500px;
 }
 
 .input {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .button_width_available {
-    width: 100%;
+  width: 100%;
 }
 
 .control-row {
-    position: relative;
-    display: inline;
+  position: relative;
+  display: inline;
 }
 
 .validation {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    color: #e00;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #e00;
+  z-index: 1;
 }
 
 /* don't tell anyone : ) */
 .form .control-group .input_type_password
 {
-    width: 330px;
+  width: 330px;
 }
